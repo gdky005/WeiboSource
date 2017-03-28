@@ -13,6 +13,9 @@ BOT_NAME = 'WeiboSource'
 
 SPIDER_MODULES = ['WeiboSource.spiders']
 NEWSPIDER_MODULE = 'WeiboSource.spiders'
+#设置代理，有些网站是反爬虫，所以要将其伪装成浏览器
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
+
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
