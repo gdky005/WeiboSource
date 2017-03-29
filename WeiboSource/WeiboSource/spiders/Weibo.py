@@ -11,23 +11,6 @@ class Weibo(CrawlSpider):
     def parse(self, response):
         print(response.body.decode('utf-8'))
 
-
-        # selector = Selector(response)
-        #
-        # item = WeibosourceItem()
-        #
-        #
-        # name = selector.xpath('//div[@class="pf_username"]/h1[@class="username"]/text()').extract()
-        #
-        #
-        #
-        # # name = selector.xpath('//div[@class="pf_wrap"]/div[@class="shadow  S_shadow"]/div[@class="pf_username"]/div[@class="pf_wrap"]/h1/text()').extract()
-        #
-        #
-        # print(name)
-
-
-
         # selector = Selector(response)
         #
         # Movies = selector.xpath('//div[@class="info"]')
