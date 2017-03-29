@@ -10,7 +10,6 @@ class Weibo(CrawlSpider):
     start_urls = ['http://weibo.com/p/10050583018062']  # 要爬取的页面地址
 
     def start_requests(self):
-
         cookies = {"SINAGLOBAL": "6109691141173.243.1438072255386",
                    "_ga": "GA1.2.2073578723.1457689189",
                    "__gads": "ID",
@@ -33,13 +32,9 @@ class Weibo(CrawlSpider):
                    "wvr": "6"}
         return [FormRequest(self.start_urls[0], cookies=cookies, callback=self.parse)]
 
-        # yield Request(response.url,
-        #               cookies={‘viewed‘:‘"1083428"‘, ‘__utmv‘:‘30149280.3975‘}, callback = self.parse_with_cookie)
-
     def parse(self, response):
         print(response.body.decode('utf-8'))
 
-        # selector = Selector(response)
         #
         # Movies = selector.xpath('//div[@class="info"]')
         #
